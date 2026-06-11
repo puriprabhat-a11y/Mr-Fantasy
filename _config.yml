@@ -1,2 +1,3 @@
+url: "https://puriprabhat-a11y.github.io/Mr.-Fantasy-/"
 plugins:
-- jekyll-sitemap
+  - jekyll-sitemap
