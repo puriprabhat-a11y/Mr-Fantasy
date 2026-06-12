@@ -540,79 +540,41 @@ footer {
 .reveal-delay-3 { animation-delay: 0.3s; }
 @media (prefers-reduced-motion: reduce) { .reveal, [class*="reveal"] { animation: none !important; } }
 
-/* SECTION HEADERS */
-.section-header { margin-bottom: 3rem; }
-.section-header h2 { margin-bottom: 0.75rem; }
-.section-header p { color: var(--ink-muted); max-width: 560px; }
+/* MOBILE NAV */
+.nav-toggle { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+.nav-toggle span { width: 22px; height: 2px; background: var(--ink); border-radius: 2px; transition: all var(--transition); display: block; }
+.mobile-nav {
+  display: none; position: fixed; inset: 0; background: var(--bg); z-index: 99;
+  flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem;
+  padding-top: 80px;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a { font-family: var(--font-display); font-size: 2.5rem; color: var(--ink-muted); }
+.mobile-nav a:hover { color: var(--accent); }
+
+.page { display: none; padding-top: 80px; }
+.page.active { display: block; }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
-  .floating-tag { display: none; }
   .hero-visual { align-items: center; }
   .hero-card-main { max-width: 100%; }
-  .case-strip { grid-template-columns: 1fr; }
-  .about-intro { grid-template-columns: 1fr; }
-  .about-portrait { max-width: 100%; aspect-ratio: 16/7; }
-  .faq-grid { grid-template-columns: 1fr; }
-  .contact-sidebar { position: static; }
-  .service-block { grid-template-columns: 1fr; }
-  .case-full-grid { grid-template-columns: 1fr; }
-  .pricing-box { grid-template-columns: 1fr; }
-  .process-steps { grid-template-columns: 1fr 1fr; }
-  .process-line { display: none; }
-  .why-grid { grid-template-columns: 1fr; gap: 2.5rem; }
 }
-
 @media (max-width: 700px) {
   nav { display: none; }
   .nav-toggle { display: flex; }
-  .proof-strip-inner { justify-content: center; gap: 2rem; }
-  .expertise-grid { grid-template-columns: 1fr 1fr; }
-  .grid-3 { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
 }
+  </style>
 
-@media (max-width: 480px) {
-  .expertise-grid { grid-template-columns: 1fr; }
-  .process-steps { grid-template-columns: 1fr; }
-}
-</style>
+  <!-- ============================================================
+       DEFER NON-CRITICAL CSS
+       ============================================================ -->
+  <link rel="preload" href="/Mr.-Fantasy-/css/non-critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/Mr.-Fantasy-/css/non-critical.css"></noscript>
 
 </head>
 <body>
-
-<!-- HEADER -->
-<header class="site-header">
-  <a href="#" class="logo" onclick="showPage('home')">
-    <div class="logo-mark">
-      <svg width="20" height="20" viewBox="0 0 20 20"><text y="15" font-size="13" font-family="Georgia,serif" font-weight="700">PP</text></svg>
-    </div>
-    <span>Prabhat Puri</span>
-  </a>
-  <nav>
-    <a href="#" class="active" id="nav-home" onclick="showPage('home');return false;">Home</a>
-    <a href="#" id="nav-about" onclick="showPage('about');return false;">About</a>
-    <a href="#" id="nav-services" onclick="showPage('services');return false;">Services</a>
-    <a href="#" id="nav-contact" onclick="showPage('contact');return false;">Contact</a>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode"><div class="theme-toggle-knob"></div></button>
-  </nav>
-  <div style="display:flex;gap:0.75rem;align-items:center;">
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" style="display:none" id="mobile-theme"><div class="theme-toggle-knob"></div></button>
-    <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<!-- MOBILE NAV -->
-<div class="mobile-nav" id="mobileNav">
-  <a href="#" onclick="showPage('home');toggleMobileNav();return false;">Home</a>
-  <a href="#" onclick="showPage('about');toggleMobileNav();return false;">About</a>
-  <a href="#" onclick="showPage('services');toggleMobileNav();return false;">Services</a>
-  <a href="#" onclick="showPage('contact');toggleMobileNav();return false;">Contact</a>
-  <button class="btn btn-accent" onclick="showPage('contact');toggleMobileNav();">Let's Work Together</button>
-</div>
 
 <!-- ==================== HOME PAGE ==================== -->
 <div class="page active" id="page-home">
