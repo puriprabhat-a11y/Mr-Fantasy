@@ -664,7 +664,10 @@ footer {
       </div>
     </div>
   </div>
-
+     <!-- ============================================================
+     CRITICAL SCRIPT (INLINE - NO DEFER)
+     ============================================================ -->
+<script>
   <!-- PROOF STRIP -->
   <div class="proof-strip">
     <div class="proof-strip-inner">
@@ -949,10 +952,6 @@ footer {
   </footer>
 </div>
 
-<!-- ============================================================
-     CRITICAL SCRIPT (INLINE - NO DEFER)
-     ============================================================ -->
-<script>
 function showPage(page) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + page).classList.add('active');
