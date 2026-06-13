@@ -1,117 +1,23 @@
-# === GOOGLE ===
-User-agent: Googlebot
-Allow: /
-Allow: /sitemap.xml
-Allow: /robots.txt
-Allow: /assets/
-Allow: /images/
-Allow: /css/
-Allow: /js/
-Disallow: /admin/
-Disallow: /private/
-Disallow: /.git/
-Disallow: /.github/
-Disallow: /node_modules/
-Disallow: /src/
-Disallow: /.env
-Disallow: /backup/
-Disallow: /temp/
-Disallow: /tmp/
-Disallow: /config/
-
-User-agent: Googlebot-Image
-Allow: /images/
-Allow: /assets/
-Disallow: /admin/
-Disallow: /private/
-
-User-agent: AdsBot-Google
-Allow: /
-
-# === OPENAI / CHATGPT ===
-User-agent: GPTBot
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /.env
-Disallow: /.git/
-
-User-agent: ChatGPT-User
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /.env
-
-User-agent: OAI-SearchBot
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-
-# === PERPLEXITY ===
-User-agent: PerplexityBot
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /.env
-
-# === ANTHROPIC CLAUDE ===
-User-agent: ClaudeBot
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /.env
-
-# === BING / COPILOT ===
-User-agent: Bingbot
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /.env
-
-# === GEMINI / GOOGLE AI ===
-User-agent: Google-Extended
-Allow: /
-Disallow: /admin/
-Disallow: /.env
-
-# === META AI ===
-User-agent: meta-externalagent
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-
-# === GROK ===
-User-agent: Grok
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-
-# === GLOBAL FALLBACK ===
+# === GLOBAL RULES ===
 User-agent: *
 Allow: /
-Allow: /sitemap.xml
-Allow: /robots.txt
-Allow: /assets/
-Allow: /images/
-Allow: /css/
-Allow: /js/
 Disallow: /admin/
 Disallow: /private/
-Disallow: /config/
-Disallow: /.git/
-Disallow: /.github/
-Disallow: /node_modules/
-Disallow: /src/
 Disallow: /backup/
 Disallow: /temp/
-Disallow: /tmp/
-Disallow: /.env
-Disallow: /.env.local
-Disallow: /.vpn/
-Disallow: /.gitignore
 
-Disallow: /.gitattributes
-Disallow: /LICENSE
-Disallow: /README.md
+# === AI CRAWLERS ===
+User-agent: GPTBot
+Allow: /
 
-Sitemap: https://puriprabhat-a11y.github.io/Mr.-Fantasy-/sitemap.xml
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# === CORRECT SITEMAP DIRECTIVE ===
+Sitemap: https://prabhatpuri.com
