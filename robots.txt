@@ -20,4 +20,4 @@ User-agent: Google-Extended
 Allow: /
 
 # === CORRECT SITEMAP DIRECTIVE ===
-Sitemap: https://prabhatpuri.com
+Sitemap: https://puriprabhat-a11y.github.io/Mr-Fantasy/
