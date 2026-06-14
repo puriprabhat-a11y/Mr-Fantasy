@@ -18,4 +18,4 @@ User-agent: Google-Extended
 Allow: /
 
 
-Sitemap: https://puriprabhat-a11y.github.io/Mr-Fantasy
+Sitemap: https://puriprabhat-a11y.github.io/Mr-Fantasy/
